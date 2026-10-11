@@ -1,89 +1,148 @@
 # Dashboard de Vendas | Power BI
 
-**Análise de faturamento, lucratividade e descontos com Power BI, Power Query e DAX.**
+**Análise de desempenho comercial, faturamento, lucratividade e descontos utilizando Power BI, Power Query e DAX.**
 
-Projeto de portfólio em análise de dados desenvolvido a partir da base demonstrativa **Financial Sample**, disponibilizada pela Microsoft. O objetivo é transformar registros de vendas em indicadores e visualizações interativas para explorar o desempenho comercial por período, país, produto e segmento de clientes.
+Projeto de análise de dados desenvolvido com a base pública *Financial Sample*, disponibilizada pela Microsoft.
 
-> **Contexto:** projeto de estudo e portfólio com dados fictícios de demonstração. Os resultados não representam as operações de uma empresa real.
+O objetivo foi transformar dados de vendas em informações para apoiar decisões de negócio, permitindo identificar diferenças de rentabilidade entre países, produtos e segmentos de clientes.
 
-## Visão geral
+**Tecnologias:** Power BI Desktop | Power Query | DAX | Excel | Business Intelligence
 
-O relatório foi estruturado em três páginas:
+## Visualização do Dashboard
 
-| Página | Análises disponíveis |
-| --- | --- |
-| **Visão Executiva** | Faturamento, lucro, margem, unidades vendidas, evolução mensal e comparação por país |
-| **Análise de Produtos** | Rankings de faturamento, lucro e margem por produto, com filtro por segmento |
-| **Análise de Descontos** | Comparação entre percentual de desconto e margem de lucro por segmento |
+### Visão Executiva
 
-### Capturas do dashboard
+![Dashboard - Visão Executiva](Vis%C3%A3o%20Executiva.png)
 
-As imagens serão adicionadas à pasta `imagens/` após a exportação das três páginas do Power BI.
+Visão consolidada dos principais indicadores de desempenho comercial, incluindo faturamento, lucro, margem, unidades vendidas, evolução mensal e resultados por país.
 
-<!-- Após incluir os arquivos, remover os comentários das linhas abaixo:
-![Visão Executiva](imagens/visao-executiva.png)
-![Análise de Produtos](imagens/analise-produtos.png)
-![Análise de Descontos](imagens/analise-descontos.png)
--->
+### Análise de Produtos
 
-## Perguntas de negócio
+![Dashboard - Análise de Produtos](An%C3%A1lise%20de%20Produtos.png)
 
-O dashboard foi elaborado para explorar questões como:
+Análise comparativa de faturamento, lucro absoluto e margem de lucro por produto, com segmentação interativa para investigar o desempenho em diferentes grupos de clientes.
 
-1. Como o faturamento evolui mês a mês?
-2. Quais países apresentam maior faturamento e maior margem de lucro?
-3. Quais produtos geram mais receita e lucro absoluto?
-4. A liderança de rentabilidade muda de acordo com o segmento de clientes?
-5. Como os percentuais de desconto variam entre os segmentos?
-6. Segmentos com maiores descontos necessariamente apresentam margens menores?
-7. Quais segmentos e produtos requerem investigação por apresentarem margem negativa?
+### Análise de Descontos
 
-## Indicadores e resultados observados
+![Dashboard - Análise de Descontos](An%C3%A1lise%20de%20Descontos.png)
 
-**Visão geral da base, sem filtros aplicados** (valores arredondados conforme exibidos no relatório):
+Comparação dos percentuais de desconto e margens de lucro entre segmentos, identificando diferenças de rentabilidade e possíveis pontos de atenção.
 
-| KPI | Resultado |
-| --- | ---: |
-| Faturamento total | **US$ 118,73 milhões** |
-| Lucro total | **US$ 16,89 milhões** |
-| Margem de lucro | **14,23%** |
-| Unidades vendidas | **1,13 milhão** |
+## Objetivos da análise
 
-**Exemplos de achados do dashboard:**
+O projeto foi desenvolvido para responder às seguintes perguntas de negócio:
 
-- **Países:** Estados Unidos lideram o faturamento, enquanto a Alemanha apresenta a maior margem de lucro (**15,66%**). Isso reforça a importância de avaliar volume de vendas e rentabilidade separadamente.
-- **Produtos:** Paseo lidera em faturamento e lucro absoluto na visão geral; Amarilla apresenta a maior margem percentual (**15,86%**).
-- **Segmentos:** Channel Partners apresenta a maior margem (**73,13%**), enquanto Enterprise apresenta margem negativa (**-3,13%**), indicando necessidade de investigar preços, custos e composição das vendas.
-- **Descontos:** Midmarket (**7,77%**) e Small Business (**7,65%**) apresentam os maiores percentuais de desconto. Os dados não permitem atribuir diferenças de margem exclusivamente aos descontos.
-- **Tempo:** o gráfico mensal revela oscilações que não ficam evidentes quando os valores são agregados apenas por ano ou trimestre.
+1. Como o faturamento evoluiu ao longo dos meses?
+2. Quais países apresentam os melhores resultados de faturamento e rentabilidade?
+3. Quais produtos geram maior faturamento e lucro?
+4. Os produtos mais vendidos são necessariamente os mais rentáveis?
+5. Quais segmentos apresentam os maiores percentuais de desconto?
+6. Existe associação entre descontos e margens de lucro?
+7. Quais segmentos apresentam resultados negativos e exigem investigação?
 
-Os indicadores são recalculados de acordo com os filtros aplicados. As observações acima dizem respeito à configuração geral do relatório e à amostra utilizada.
+## Indicadores de desempenho (KPIs)
 
-## Ferramentas e habilidades aplicadas
+Resultados gerais da base, sem filtros aplicados:
 
-- **Power BI Desktop:** construção de relatórios, cartões, gráficos de linhas e barras, segmentações e interações.
-- **Power Query:** importação do Excel, verificação de tipos de dados, valores vazios e erros.
-- **DAX:** medidas para faturamento, lucro, margem, quantidade vendida e percentual de desconto.
-- **Análise de dados:** comparação de indicadores, evolução temporal, identificação de contrastes entre segmentos e interpretação de resultados.
+| Indicador | Resultado |
+|---|---:|
+| Faturamento Total | US$ 118,73 milhões |
+| Lucro Total | US$ 16,89 milhões |
+| Margem de Lucro | 14,23% |
+| Unidades Vendidas | 1,13 milhão |
 
-## Exemplos de cálculos DAX
+Os indicadores são dinâmicos e respondem aos filtros disponíveis no relatório.
+
+## Principais resultados identificados
+
+### 1. Faturamento não significa maior rentabilidade
+
+Os Estados Unidos apresentam o maior faturamento, enquanto a Alemanha possui a maior margem de lucro, de 15,66%.
+
+Esse resultado demonstra a importância de avaliar faturamento e rentabilidade separadamente.
+
+### 2. Produtos com maior receita nem sempre possuem maior margem
+
+O produto **Paseo** lidera o faturamento e o lucro absoluto na visão geral.
+
+Entretanto, **Amarilla** apresenta a maior margem percentual, de 15,86%.
+
+Isso mostra que diferentes indicadores podem produzir rankings distintos de desempenho.
+
+### 3. Segmento Enterprise apresenta prejuízo
+
+A análise por segmento identificou:
+
+- Channel Partners: margem de lucro de 73,13%.
+- Midmarket: margem de lucro de 27,71%.
+- Enterprise: margem de lucro de -3,13%.
+
+O resultado negativo do segmento Enterprise aponta para a necessidade de investigar os custos, preços praticados e composição das vendas.
+
+### 4. Maiores descontos não representam necessariamente menores margens
+
+Os segmentos Midmarket (7,77%) e Small Business (7,65%) apresentam os maiores percentuais de desconto.
+
+Entretanto, as diferenças de rentabilidade entre os segmentos não acompanham necessariamente a mesma ordem dos descontos.
+
+Portanto, os dados não permitem concluir que os descontos, isoladamente, sejam responsáveis pelas menores margens.
+
+### 5. A análise mensal revela oscilações no faturamento
+
+A visualização mensal permite identificar períodos de crescimento e queda que poderiam passar despercebidos em comparações agregadas por ano ou trimestre.
+
+Essa análise reforça a importância da granularidade temporal na interpretação dos indicadores.
+
+## Desenvolvimento técnico
+
+### Preparação dos dados — Power Query
+
+A base foi importada de um arquivo Excel e examinada no Power Query, incluindo:
+
+- Conferência dos tipos de dados.
+- Verificação de valores nulos e erros.
+- Análise da distribuição e qualidade das colunas.
+- Organização dos campos utilizados nas análises.
+
+### Modelagem e cálculos — DAX
+
+Foram utilizadas medidas para calcular indicadores financeiros e comerciais.
+
+**Faturamento Total**
 
 ```dax
 Faturamento Total =
 SUM('F_Vendas'[Sales])
+```
 
+**Lucro Total**
+
+```dax
 Lucro Total =
 SUM('F_Vendas'[Profit])
+```
 
+**Margem de Lucro**
+
+```dax
 Margem de Lucro =
-DIVIDE([Lucro Total], [Faturamento Total], 0)
+DIVIDE(
+    [Lucro Total],
+    [Faturamento Total],
+    0
+)
+```
 
+**Total de Unidades Vendidas**
+
+```dax
 Total de Unidades Vendidas =
 SUM('F_Vendas'[Units Sold])
+```
 
-Total de Descontos =
-SUM('F_Vendas'[Discounts])
+**Percentual de Desconto**
 
+```dax
 Percentual de Desconto =
 DIVIDE(
     SUM('F_Vendas'[Discounts]),
@@ -92,41 +151,51 @@ DIVIDE(
 )
 ```
 
-Coluna de apoio para visualizar períodos mensais:
+**Coluna auxiliar para análise mensal**
 
 ```dax
 AnoMes =
 FORMAT(
-    DATE('F_Vendas'[Year], 'F_Vendas'[Month Number], 1),
+    DATE(
+        'F_Vendas'[Year],
+        'F_Vendas'[Month Number],
+        1
+    ),
     "yyyy-MM"
 )
 ```
 
-## Como abrir o projeto
+### Visualização e interação
+
+O relatório contém três páginas com indicadores, gráficos de linhas, gráficos de barras e filtros interativos.
+
+As segmentações permitem explorar os resultados em diferentes contextos e comparar o comportamento dos indicadores.
+
+## Como executar o projeto
 
 1. Instale o [Power BI Desktop](https://www.microsoft.com/pt-br/download/details.aspx?id=58494).
-2. Baixe ou clone este repositório.
-3. Abra `Dashboard_Analise_Vendas.pbix` no Power BI Desktop.
-4. Navegue pelas três páginas e experimente os filtros de país e segmento.
+2. Baixe este repositório.
+3. Abra o arquivo `Dashboard_Analise_Vendas.pbix`.
+4. Explore as páginas e utilize os filtros disponíveis.
 
-Se o Power BI solicitar a localização da planilha de origem ao atualizar os dados, ajuste o caminho da fonte no Power Query. A base demonstrativa pode ser obtida na [documentação da Microsoft — Financial Sample](https://learn.microsoft.com/pt-br/power-bi/create-reports/sample-financial-download).
+Caso seja necessário atualizar os dados, a base original está disponível na [documentação da Microsoft](https://learn.microsoft.com/pt-br/power-bi/create-reports/sample-financial-download).
 
-## Fonte e limitações
+## Fonte e considerações
 
-- **Fonte:** *Financial Sample* da Microsoft, conjunto de dados demonstrativo.
-- **Natureza:** registros fictícios, usados exclusivamente para aprendizado e demonstração de habilidades.
-- **Período:** dados de 2013 e 2014, conforme disponíveis na fonte; não é adequado comparar anos sem verificar a cobertura de meses.
-- **Interpretação:** diferenças entre descontos e margens são associações observadas; não comprovam causalidade.
-- **Unidade monetária:** valores apresentados no relatório como dólares (USD), sem conversão cambial.
+O projeto utiliza o conjunto de dados demonstrativo **Financial Sample**, disponibilizado pela Microsoft.
 
-## Próximos aprimoramentos
+Os registros são fictícios e servem para demonstrar a aplicação de técnicas de análise de dados e Business Intelligence.
 
-- Estruturar uma tabela calendário dedicada e relacionamentos para análises temporais mais avançadas.
-- Incluir comparações entre períodos equivalentes e métricas de variação percentual.
-- Documentar verificações adicionais de reconciliação entre vendas, descontos, custos e lucro.
+A base contém registros de 2013 e 2014. Comparações entre períodos devem considerar a cobertura dos meses disponíveis.
+
+Os resultados representam os cálculos e relacionamentos observados na base e não devem ser interpretados como comprovação de causalidade.
+
+## Evolução do projeto
+
+Possibilidades de aprimoramento incluem a implementação de uma tabela calendário dedicada, análises de variação entre períodos equivalentes e verificações adicionais de consistência dos indicadores financeiros.
 
 ---
 
 **Projeto de portfólio | Análise de Dados e Business Intelligence**
 
-[Perfil no GitHub](https://github.com/eliasvinharski97)
+[GitHub — Elias Santos Vinharski](https://github.com/eliasvinharski97)
