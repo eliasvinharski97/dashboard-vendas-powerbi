@@ -1,112 +1,163 @@
 # Dashboard de Vendas | Power BI
 
-**Análise de desempenho comercial, faturamento, lucratividade e descontos utilizando Power BI, Power Query e DAX.**
+**Análise de desempenho comercial, faturamento, lucratividade e descontos com Power BI, Power Query e DAX.**
 
-Projeto de análise de dados desenvolvido com a base pública *Financial Sample*, disponibilizada pela Microsoft.
+Projeto de portfólio em Análise de Dados e Business Intelligence desenvolvido a partir da base pública **Financial Sample**, disponibilizada pela Microsoft.
 
-O objetivo foi transformar dados de vendas em informações para apoiar decisões de negócio, permitindo identificar diferenças de rentabilidade entre países, produtos e segmentos de clientes.
+O objetivo foi transformar dados de vendas em indicadores e visualizações interativas para analisar o desempenho comercial, identificar diferenças de rentabilidade e explorar oportunidades de melhoria por país, produto e segmento de clientes.
 
-**Tecnologias:** Power BI Desktop | Power Query | DAX | Excel | Business Intelligence
+**Tecnologias utilizadas:** Power BI Desktop | Power Query | DAX | Excel | Business Intelligence
 
 ## Visualização do Dashboard
 
-### Visão Executiva
+O dashboard foi desenvolvido em três páginas, organizadas para facilitar a navegação e a interpretação dos resultados.
+
+### 1. Visão Executiva
 
 ![Dashboard - Visão Executiva](Vis%C3%A3o%20Executiva.png)
 
-Visão consolidada dos principais indicadores de desempenho comercial, incluindo faturamento, lucro, margem, unidades vendidas, evolução mensal e resultados por país.
+Apresenta uma visão consolidada dos principais indicadores financeiros e comerciais:
 
-### Análise de Produtos
+- Faturamento total.
+- Lucro total.
+- Margem de lucro.
+- Total de unidades vendidas.
+- Evolução mensal do faturamento.
+- Comparação de faturamento e rentabilidade entre países.
+
+A página conta com filtros interativos para explorar os resultados por país.
+
+### 2. Análise de Produtos
 
 ![Dashboard - Análise de Produtos](An%C3%A1lise%20de%20Produtos.png)
 
-Análise comparativa de faturamento, lucro absoluto e margem de lucro por produto, com segmentação interativa para investigar o desempenho em diferentes grupos de clientes.
+Permite comparar o desempenho dos produtos a partir de três indicadores:
 
-### Análise de Descontos
+- Faturamento por produto.
+- Lucro absoluto por produto.
+- Margem de lucro por produto.
+
+A segmentação por tipo de cliente permite identificar como a rentabilidade dos produtos varia entre diferentes mercados.
+
+### 3. Análise de Descontos
 
 ![Dashboard - Análise de Descontos](An%C3%A1lise%20de%20Descontos.png)
 
-Comparação dos percentuais de desconto e margens de lucro entre segmentos, identificando diferenças de rentabilidade e possíveis pontos de atenção.
+Apresenta uma análise comparativa entre:
 
-## Objetivos da análise
+- Percentual de desconto por segmento.
+- Margem de lucro por segmento.
 
-O projeto foi desenvolvido para responder às seguintes perguntas de negócio:
+O objetivo é investigar possíveis associações entre as condições comerciais praticadas e os resultados de rentabilidade.
+
+## Objetivos da Análise
+
+O dashboard foi desenvolvido para responder às seguintes perguntas de negócio:
 
 1. Como o faturamento evoluiu ao longo dos meses?
-2. Quais países apresentam os melhores resultados de faturamento e rentabilidade?
-3. Quais produtos geram maior faturamento e lucro?
-4. Os produtos mais vendidos são necessariamente os mais rentáveis?
-5. Quais segmentos apresentam os maiores percentuais de desconto?
-6. Existe associação entre descontos e margens de lucro?
-7. Quais segmentos apresentam resultados negativos e exigem investigação?
+2. Quais países apresentam os maiores faturamentos?
+3. Os países que mais faturam também possuem as maiores margens de lucro?
+4. Quais produtos geram mais faturamento e lucro?
+5. Quais produtos apresentam maior rentabilidade proporcional?
+6. Como o desempenho dos produtos varia entre os segmentos de clientes?
+7. Quais segmentos apresentam os maiores percentuais de desconto?
+8. Existe associação entre descontos e margens de lucro?
+9. Quais segmentos apresentam resultados negativos e exigem investigação?
 
-## Indicadores de desempenho (KPIs)
+## Indicadores de Desempenho (KPIs)
 
-Resultados gerais da base, sem filtros aplicados:
+Os indicadores foram desenvolvidos com medidas DAX e respondem dinamicamente aos filtros aplicados no relatório.
+
+### Resultados gerais
 
 | Indicador | Resultado |
 |---|---:|
 | Faturamento Total | US$ 118,73 milhões |
 | Lucro Total | US$ 16,89 milhões |
 | Margem de Lucro | 14,23% |
-| Unidades Vendidas | 1,13 milhão |
+| Total de Unidades Vendidas | 1,13 milhão |
 
-Os indicadores são dinâmicos e respondem aos filtros disponíveis no relatório.
+*Valores arredondados conforme apresentados no Power BI, considerando a visão geral da base sem filtros aplicados.*
 
-## Principais resultados identificados
+## Principais Resultados Identificados
 
-### 1. Faturamento não significa maior rentabilidade
+### 1. Maior faturamento não significa maior rentabilidade
 
-Os Estados Unidos apresentam o maior faturamento, enquanto a Alemanha possui a maior margem de lucro, de 15,66%.
+A análise por país demonstrou que os **Estados Unidos lideram o faturamento**, enquanto a **Alemanha apresenta a maior margem de lucro, com 15,66%**.
 
-Esse resultado demonstra a importância de avaliar faturamento e rentabilidade separadamente.
+Esse resultado evidencia a importância de avaliar faturamento e rentabilidade como indicadores complementares.
+
+Um mercado com maior volume de vendas não necessariamente apresenta o melhor desempenho proporcional em lucro.
 
 ### 2. Produtos com maior receita nem sempre possuem maior margem
 
-O produto **Paseo** lidera o faturamento e o lucro absoluto na visão geral.
+Na análise geral, o produto **Paseo** apresentou o maior faturamento e lucro absoluto.
 
-Entretanto, **Amarilla** apresenta a maior margem percentual, de 15,86%.
+Entretanto, o produto **Amarilla** apresentou a maior margem de lucro, de **15,86%**.
 
-Isso mostra que diferentes indicadores podem produzir rankings distintos de desempenho.
+Essa diferença demonstra que a avaliação do portfólio de produtos deve considerar tanto os valores absolutos quanto a rentabilidade proporcional.
 
-### 3. Segmento Enterprise apresenta prejuízo
+### 3. Segmento Enterprise apresenta resultado negativo
 
-A análise por segmento identificou:
+A comparação de margens entre segmentos identificou diferenças relevantes de desempenho.
 
-- Channel Partners: margem de lucro de 73,13%.
-- Midmarket: margem de lucro de 27,71%.
-- Enterprise: margem de lucro de -3,13%.
+| Segmento | Margem de Lucro |
+|---|---:|
+| Channel Partners | 73,13% |
+| Midmarket | 27,71% |
+| Government | 21,69% |
+| Small Business | 9,77% |
+| Enterprise | -3,13% |
 
-O resultado negativo do segmento Enterprise aponta para a necessidade de investigar os custos, preços praticados e composição das vendas.
+O segmento **Enterprise apresentou margem negativa de -3,13%**, indicando prejuízo na base analisada.
 
-### 4. Maiores descontos não representam necessariamente menores margens
+A análise por produto mostrou que todos os seis produtos apresentam margens negativas nesse segmento.
 
-Os segmentos Midmarket (7,77%) e Small Business (7,65%) apresentam os maiores percentuais de desconto.
+Esse resultado indica a necessidade de aprofundar a investigação sobre custos, preços e composição das vendas.
 
-Entretanto, as diferenças de rentabilidade entre os segmentos não acompanham necessariamente a mesma ordem dos descontos.
+### 4. Os descontos não explicam isoladamente a rentabilidade
 
-Portanto, os dados não permitem concluir que os descontos, isoladamente, sejam responsáveis pelas menores margens.
+A comparação dos percentuais de desconto entre os segmentos apresentou:
+
+| Segmento | Percentual de Desconto |
+|---|---:|
+| Midmarket | 7,77% |
+| Small Business | 7,65% |
+| Channel Partners | 6,95% |
+| Enterprise | 6,92% |
+| Government | 6,91% |
+
+Os segmentos que apresentam maiores descontos não são necessariamente aqueles com menores margens.
+
+Por exemplo, o segmento Enterprise possui a menor margem de lucro, mas não apresenta o maior percentual de desconto.
+
+Assim, não é possível atribuir o prejuízo exclusivamente aos descontos. Outros fatores financeiros e comerciais devem ser considerados.
 
 ### 5. A análise mensal revela oscilações no faturamento
 
-A visualização mensal permite identificar períodos de crescimento e queda que poderiam passar despercebidos em comparações agregadas por ano ou trimestre.
+A evolução mensal permitiu identificar períodos de crescimento e redução do faturamento ao longo da série histórica.
 
-Essa análise reforça a importância da granularidade temporal na interpretação dos indicadores.
+As variações mostram que o aumento do faturamento entre períodos mais amplos não representa necessariamente crescimento contínuo mês a mês.
 
-## Desenvolvimento técnico
+Essa análise demonstra a importância de utilizar a granularidade temporal adequada para compreender o comportamento dos indicadores.
 
-### Preparação dos dados — Power Query
+## Desenvolvimento Técnico
 
-A base foi importada de um arquivo Excel e examinada no Power Query, incluindo:
+### Preparação e tratamento dos dados — Power Query
 
-- Conferência dos tipos de dados.
-- Verificação de valores nulos e erros.
-- Análise da distribuição e qualidade das colunas.
+Os dados foram importados de um arquivo Excel e examinados no Power Query.
+
+As principais atividades incluíram:
+
+- Verificação dos tipos de dados.
+- Análise de valores nulos e erros.
+- Conferência da consistência das colunas.
+- Inspeção da distribuição dos registros.
 - Organização dos campos utilizados nas análises.
 
 ### Modelagem e cálculos — DAX
 
-Foram utilizadas medidas para calcular indicadores financeiros e comerciais.
+Foram desenvolvidas medidas para calcular os principais indicadores financeiros e comerciais.
 
 **Faturamento Total**
 
@@ -140,6 +191,13 @@ Total de Unidades Vendidas =
 SUM('F_Vendas'[Units Sold])
 ```
 
+**Total de Descontos**
+
+```dax
+Total de Descontos =
+SUM('F_Vendas'[Discounts])
+```
+
 **Percentual de Desconto**
 
 ```dax
@@ -165,37 +223,83 @@ FORMAT(
 )
 ```
 
-### Visualização e interação
+A utilização de medidas DAX permite recalcular os indicadores conforme o contexto dos filtros aplicados, mantendo a interatividade das análises.
 
-O relatório contém três páginas com indicadores, gráficos de linhas, gráficos de barras e filtros interativos.
+### Visualização e interatividade
 
-As segmentações permitem explorar os resultados em diferentes contextos e comparar o comportamento dos indicadores.
+Foram utilizados:
 
-## Como executar o projeto
+- Cartões de indicadores.
+- Gráficos de linhas.
+- Gráficos de barras horizontais.
+- Segmentações interativas.
+- Ordenação por desempenho.
+- Rótulos de dados.
+- Formatação de indicadores financeiros e percentuais.
+
+O relatório foi organizado para permitir uma navegação entre a visão consolidada e análises mais específicas.
+
+## Base de Dados e Fonte
+
+O projeto utiliza a base pública **Financial Sample**, disponibilizada pela Microsoft para demonstração de análises financeiras e comerciais.
+
+O arquivo original está incluído neste repositório e pode ser acessado pelo link:
+
+**[Acessar Financial Sample.xlsx](Financial%20Sample.xlsx)**
+
+### Características da base
+
+| Característica | Descrição |
+|---|---|
+| Fonte | Microsoft — Financial Sample |
+| Formato | Excel (.xlsx) |
+| Quantidade de registros | 700 |
+| Quantidade de colunas originais | 16 |
+| Período | 2013 e 2014 |
+| Países | Canadá, França, Alemanha, México e Estados Unidos |
+| Produtos | Paseo, VTT, Velo, Amarilla, Montana e Carretera |
+| Informações | Vendas, custos, descontos, lucros, produtos, países e segmentos |
+
+**Fonte oficial:** [Microsoft — Financial Sample](https://learn.microsoft.com/pt-br/power-bi/create-reports/sample-financial-download).
+
+### Reprodutibilidade da análise
+
+A disponibilização da planilha permite consultar os registros utilizados no projeto e reproduzir as análises desenvolvidas no Power BI.
+
+O arquivo `.pbix` contém as páginas, os visuais, as medidas DAX e as configurações do relatório.
+
+### Considerações e limitações
+
+- Os dados são fictícios e utilizados para fins educacionais e de portfólio.
+- As comparações temporais devem considerar a cobertura de meses disponível em cada ano.
+- As associações observadas entre descontos, custos e margens não comprovam relações de causa e efeito.
+- Os valores financeiros são apresentados em dólares (USD), sem conversão cambial.
+- Os resultados correspondem à base demonstrativa utilizada e não representam operações de uma empresa real.
+
+## Como Executar o Projeto
 
 1. Instale o [Power BI Desktop](https://www.microsoft.com/pt-br/download/details.aspx?id=58494).
-2. Baixe este repositório.
+2. Baixe ou clone este repositório.
 3. Abra o arquivo `Dashboard_Analise_Vendas.pbix`.
-4. Explore as páginas e utilize os filtros disponíveis.
+4. Navegue pelas três páginas do relatório.
+5. Utilize os filtros de países e segmentos para explorar os resultados.
 
-Caso seja necessário atualizar os dados, a base original está disponível na [documentação da Microsoft](https://learn.microsoft.com/pt-br/power-bi/create-reports/sample-financial-download).
+Caso seja necessário atualizar os dados, verifique o caminho da fonte no Power Query e aponte para o arquivo `Financial Sample.xlsx` disponibilizado neste repositório.
 
-## Fonte e considerações
+## Evolução do Projeto
 
-O projeto utiliza o conjunto de dados demonstrativo **Financial Sample**, disponibilizado pela Microsoft.
+Como possibilidades de aprofundamento técnico, o projeto poderá incorporar:
 
-Os registros são fictícios e servem para demonstrar a aplicação de técnicas de análise de dados e Business Intelligence.
+- Tabela calendário dedicada para análises temporais.
+- Comparações de faturamento e lucro entre períodos equivalentes.
+- Indicadores de crescimento percentual.
+- Verificações adicionais de consistência entre vendas, custos, descontos e lucros.
+- Análises mais detalhadas dos segmentos com rentabilidade negativa.
 
-A base contém registros de 2013 e 2014. Comparações entre períodos devem considerar a cobertura dos meses disponíveis.
-
-Os resultados representam os cálculos e relacionamentos observados na base e não devem ser interpretados como comprovação de causalidade.
-
-## Evolução do projeto
-
-Possibilidades de aprimoramento incluem a implementação de uma tabela calendário dedicada, análises de variação entre períodos equivalentes e verificações adicionais de consistência dos indicadores financeiros.
+Essas melhorias permitirão explorar técnicas adicionais de modelagem, DAX e análise financeira.
 
 ---
 
-**Projeto de portfólio | Análise de Dados e Business Intelligence**
+**Projeto de Portfólio | Análise de Dados e Business Intelligence**
 
 [GitHub — Elias Santos Vinharski](https://github.com/eliasvinharski97)
