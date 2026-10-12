@@ -8,6 +8,20 @@ O objetivo foi transformar dados de vendas em indicadores e visualizações inte
 
 **Tecnologias utilizadas:** Power BI Desktop | Power Query | DAX | Excel | Business Intelligence
 
+## Leitura rápida
+
+- **Pergunta:** quais países, produtos e segmentos combinam faturamento e rentabilidade?
+- **Entrega:** três páginas interativas, [arquivo PBIX](Dashboard_Analise_Vendas.pbix) e [base demonstrativa](Financial%20Sample.xlsx).
+- **Achado:** o segmento Enterprise apresenta margem de -3,13%. Isso orienta uma investigação de custos, preços e composição das vendas; não comprova que os descontos causaram o prejuízo.
+- **Escopo:** projeto de portfólio com dados fictícios da Microsoft, sem resultado operacional atribuído a uma empresa real.
+
+## Decisões técnicas e como conferir
+
+1. **Margem como razão entre totais:** a medida divide o lucro total pelo faturamento total, evitando uma média simples das margens das linhas. As fórmulas DAX estão na seção de desenvolvimento técnico.
+2. **Desconto sobre venda bruta:** o percentual divide os descontos pela venda bruta, enquanto a margem usa `Sales`. Os indicadores têm denominadores diferentes e respondem a perguntas diferentes.
+3. **Cuidado de interpretação:** Enterprise tem margem negativa sem ter o maior percentual de desconto. Por isso, a análise trata descontos como um fator a investigar, sem atribuir causalidade.
+4. **Roteiro de conferência:** abra o PBIX sem filtros e compare os totais com a planilha. Depois, filtre Enterprise e compare `SUM(Profit) / SUM(Sales)` com a margem exibida. Esse roteiro permite verificar o cálculo; não representa uma nova auditoria do arquivo PBIX.
+
 ## Visualização do Dashboard
 
 O dashboard foi desenvolvido em três páginas, organizadas para facilitar a navegação e a interpretação dos resultados.
